@@ -2,12 +2,14 @@
 # Необходимо вывести имена всех учеников из списка с новой строки
 
 print('Задание №1')
-print()
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 
-for name in names:
-    print(name)
+def ex1():
+    for name in names:
+        print(name)
+
+ex1()
 
 print()
 
@@ -18,12 +20,14 @@ print()
 # Петя: 4
 
 print('Задание №2')
-print()
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 
-for name in names:
-    print(f'{name}: {len(name)}')
+def ex2():
+    for name in names:
+        print(f'{name}: {len(name)}')
+
+ex2()
 
 print()
 
@@ -32,7 +36,6 @@ print()
 #
 
 print('Задание №3')
-print()
 
 is_male = {
     'Оля': False,  # если False, то пол женский
@@ -42,12 +45,15 @@ is_male = {
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 
-for name in names:
-    if is_male[name]:
-        gender = 'мужской'
-    else:
-        gender = 'женский'
-    print(f'{name} - {gender}')
+def ex3():
+    for name in names:
+        if is_male[name]:
+            gender = 'мужской'
+        else:
+            gender = 'женский'
+        print(f'{name} - {gender}')
+
+ex3()
 
 print()
 
@@ -59,7 +65,6 @@ print()
 # Группа 2: 4 ученика.
 
 print('Задание №4')
-print()
 
 groups = [
     ['Вася', 'Маша'],
@@ -67,11 +72,14 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
 ]
 
-print(f'Всего {len(groups)} группы')
-number_group = 0
-for group in groups:
-    number_group +=1
-    print(f'Группа {number_group}: {len(group)}')
+def ex4():
+    print(f'Всего {len(groups)} группы')
+    number_group = 0
+    for group in groups:
+        number_group +=1
+        print(f'Группа {number_group}: {len(group)}')
+
+ex4()
 
 print()
 
@@ -82,7 +90,7 @@ print()
 # Группа 2: Оля, Петя, Гриша
 
 print('Задание №5')
-print()
+
 
 groups = [
     ['Вася', 'Маша'],
@@ -90,8 +98,11 @@ groups = [
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
 
-number_group = 0
-for group in groups:
-    number_group +=1
-    string_name = ", ".join(group)
-    print(f'Группа {number_group}: {string_name}')
+def ex5():
+    number_group = 0
+    for group in groups:
+        number_group +=1
+        string_name = ", ".join(group)
+        print(f'Группа {number_group}: {string_name}')
+
+ex5()
