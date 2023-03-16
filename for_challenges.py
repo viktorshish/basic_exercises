@@ -33,7 +33,6 @@ print()
 
 # Задание 3
 # Необходимо вывести имена всех учеников из списка, рядом с именем вывести пол ученика
-#
 
 print('Задание №3')
 
@@ -74,10 +73,8 @@ groups = [
 
 def ex4():
     print(f'Всего {len(groups)} группы')
-    number_group = 0
-    for group in groups:
-        number_group +=1
-        print(f'Группа {number_group}: {len(group)}')
+    for num, group  in enumerate(groups, 1):
+        print(f'Группа {num}: {len(group)}')
 
 ex4()
 
@@ -99,10 +96,8 @@ groups = [
 ]
 
 def ex5():
-    number_group = 0
-    for group in groups:
-        number_group +=1
+    for num, group in enumerate(groups, 1):
         string_name = ", ".join(group)
-        print(f'Группа {number_group}: {string_name}')
+        print(f'Группа {num}: {string_name}')
 
 ex5()
