@@ -73,8 +73,8 @@ groups = [
 
 def ex4():
     print(f'Всего {len(groups)} группы')
-    for num, group in enumerate(groups, 1):
-        print(f'Группа {num}: {len(group)}')
+    for number_group, group in enumerate(groups, 1):
+        print(f'Группа {number_group}: {len(group)}')
 
 ex4()
 
@@ -96,8 +96,8 @@ groups = [
 ]
 
 def ex5():
-    for num, group in enumerate(groups, 1):
+    for number_group, group in enumerate(groups, 1):
         string_name = ", ".join(group)
-        print(f'Группа {num}: {string_name}')
+        print(f'Группа {number_group}: {string_name}')
 
 ex5()
