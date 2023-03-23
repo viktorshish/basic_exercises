@@ -74,11 +74,11 @@ school_students = [
 for number_group, group in enumerate(school_students, 1):
     name_counts = {}
     for student in group:
-        comparison_name = student['first_name']
-        if comparison_name in name_counts:
-            name_counts[comparison_name] += 1
+        name_student = student['first_name']
+        if name_student in name_counts:
+            name_counts[name_student] += 1
         else:
-            name_counts[comparison_name] = 1
+            name_counts[name_student] = 1
     max_count_name = max(name_counts, key=name_counts.get)
     print(f'Самое частое имя в классе {number_group}: {max_count_name}')
 
@@ -106,16 +106,16 @@ is_male = {
 # 1) разбить на классы - пройтись циклом по классам
 for group in school:
     # 2) Пройтись циклом по студентам
-    girl = 0
-    boy = 0
+    count_girl = 0
+    count_boy = 0
     for student in group['students']:
-        name = student['first_name']
+        name_student = student['first_name']
         # 3) Разобраться кто в классе мальчик, а кто девочка
-        if is_male[name]:
-            boy += 1
+        if is_male[name_student]:
+            count_boy += 1
         else:
-            girl += 1
-    print(f'Класс {group["class"]}: девочки {girl}, мальчики {boy}')
+            count_girl += 1
+    print(f'Класс {group["class"]}: девочки {count_girl}, мальчики {count_boy}')
 
 print()
 
