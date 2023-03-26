@@ -38,4 +38,4 @@ count_letters = 0
 for word in sentence_list:
     count_word += 1
     count_letters += len(word)
-print(int(count_letters/count_word))
+print(count_letters // count_word)
