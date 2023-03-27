@@ -4,18 +4,22 @@ print(word[-1])
 
 
 # Вывести количество букв "а" в слове
-word = 'Архангельск'
-print(len(word))
+word = 'Архангельск'.lower()
+count_a = 0
+for letter in word:
+    if letter == 'а':
+        count_a += 1
+print(count_a)
 
 
 # Вывести количество гласных букв в слове
-word = 'Архангельск'
+word = 'Архангельск'.lower()
 vowels = 'аеёиоуыэюя'
-count = 1
+count_vowels = 0
 for letter in word:
     if letter in vowels:
-        count += 1
-print(count)
+        count_vowels += 1
+print(count_vowels)
 
 
 # Вывести количество слов в предложении
