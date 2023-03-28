@@ -5,16 +5,14 @@ print(word[-1])
 
 # Вывести количество букв "а" в слове
 word = 'Архангельск'.lower()
-count_a = 0
-for letter in word:
-    if letter == 'а':
-        count_a += 1
+count_a = word.count('а')
 print(count_a)
 
 
 # Вывести количество гласных букв в слове
 word = 'Архангельск'.lower()
 vowels = 'аеёиоуыэюя'
+count_vowels = word.count(vowels)
 count_vowels = 0
 for letter in word:
     if letter in vowels:
