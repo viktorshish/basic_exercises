@@ -12,7 +12,6 @@ print(count_a)
 # Вывести количество гласных букв в слове
 word = 'Архангельск'.lower()
 vowels = 'аеёиоуыэюя'
-count_vowels = word.count(vowels)
 count_vowels = 0
 for letter in word:
     if letter in vowels:
@@ -35,9 +34,7 @@ for word in sentence_list:
 # Вывести усреднённую длину слова в предложении
 sentence = 'Мы приехали в гости'
 sentence_list = sentence.split(' ')
-count_word = 0
 count_letters = 0
 for word in sentence_list:
-    count_word += 1
     count_letters += len(word)
-print(count_letters // count_word)
+print(count_letters // len(sentence_list))
