@@ -69,8 +69,7 @@ print()
 print('Задание 2')
 
 for department in departments:
-    employers = department["employers"]
-    for employee in employers:
+    for employee in department['employers']:
         print(employee['first_name'])
 print()
 
@@ -78,8 +77,7 @@ print()
 print('Задание 3')
 
 for department in departments:
-    employers = department["employers"]
-    for employee in employers:
+    for employee in department['employers']:
         print(f"{employee['first_name']} работает в отделе: {department['title']}")
 print()
 
@@ -87,29 +85,26 @@ print()
 print('Задание 4')
 
 for department in departments:
-    employers = department["employers"]
-    for employee in employers:
-        if employee['salary_rub'] > 100000:
-            print(f'{employee["first_name"]} получает больше 100к')
+    comparative_salary = 100000
+    for employee in department['employers']:
+        if employee['salary_rub'] > comparative_salary:
+            print(f'{employee["first_name"]} получает больше {comparative_salary} рублей')
 print()
 
 # 5. Вывести позиции, на которых люди получают меньше 80к (можно с повторениями).
 print('Задание 5')
 
 for department in departments:
-    employers = department["employers"]
-    for employee in employers:
-        if employee['salary_rub'] < 80000:
-            print(f'На позиции {employee["position"]} получают меньше 80к')
+    comparative_salary = 80000
+    for employee in department['employers']:
+        if employee['salary_rub'] < comparative_salary:
+            print(f'На позиции {employee["position"]} получают меньше {comparative_salary} рублей')
 print()
 
 # 6. Посчитать, сколько денег в месяц уходит на каждый отдел – и вывести вместе с названием отдела
 print('Задание 6')
 for department in departments:
     money_spent_department = 0
-    employers = department["employers"]
-    for employee in employers:
+    for employee in department['employers']:
         money_spent_department += employee['salary_rub']
     print(f'Отдел: {department["title"]} потратил {money_spent_department} рублей')
-
-
